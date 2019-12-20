@@ -20,9 +20,9 @@ const app=express()
 app.use(bodyParser.json())
 app.use(cors())
 
-// app.get('/',(req,res)=>{
-//     res.json({"hello":"hello"})
-// })
+app.get('/',(req,res)=>{
+    res.json({"hello":"hello"})
+})
 
 app.post('/signin',(req,res)=>{
     db.select('email','hash').from('login')
